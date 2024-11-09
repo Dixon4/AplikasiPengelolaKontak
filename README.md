@@ -11,4 +11,4 @@ Repositori ini berisi berbagai proyek yang telah saya kerjakan selama perkuliaha
 ## Cara Menggunakan
 Untuk menjalankan proyek ini, Anda dapat mengkloning repositori ini ke komputer Anda dengan perintah berikut:
 ```bash
-https://github.com/Dixon4/AplikasiPertambahan.git
+https://github.com/Dixon4/AplikasiPengelolaKontak.git
