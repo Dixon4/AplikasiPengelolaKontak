@@ -309,6 +309,11 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
                 "id", "Nama", "Nomor Telepon", "Kategori"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -322,6 +327,7 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(1, 1, 1, 1);
         jPanel2.add(jScrollPane1, gridBagConstraints);
 
+        jButton1.setBackground(new java.awt.Color(102, 255, 102));
         jButton1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jButton1.setText("Tambah");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -336,6 +342,7 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
         jPanel2.add(jButton1, gridBagConstraints);
 
+        jButton2.setBackground(new java.awt.Color(255, 102, 51));
         jButton2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jButton2.setText("Edit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -351,6 +358,7 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
         jPanel2.add(jButton2, gridBagConstraints);
 
+        jButton3.setBackground(new java.awt.Color(255, 0, 0));
         jButton3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jButton3.setText("Hapus");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -387,6 +395,7 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
         jPanel2.add(jTextField4, gridBagConstraints);
 
+        jButton5.setBackground(new java.awt.Color(0, 153, 153));
         jButton5.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jButton5.setText("Ekspor");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -401,6 +410,7 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(2, 2, 2, 2);
         jPanel2.add(jButton5, gridBagConstraints);
 
+        jButton6.setBackground(new java.awt.Color(0, 153, 153));
         jButton6.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jButton6.setText("Impor");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -542,6 +552,22 @@ public class PengelolaanKontakFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Kategori yang dipilih: " + selectedKategori);
     }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+         // Dapatkan baris yang dipilih di tabel
+        int selectedRow = jTable1.getSelectedRow();
+
+        // Cek apakah ada baris yang dipilih
+        if (selectedRow != -1) {
+        // Ambil data dari kolom di baris yang dipilih
+        String dataKolom1 = (String) jTable1.getValueAt(selectedRow, 0); 
+        String dataKolom2 = (String) jTable1.getValueAt(selectedRow, 1); 
+
+        // Tampilkan data di JTextField
+        jTextField1.setText(dataKolom1); 
+        jTextField2.setText(dataKolom2); 
+    }
+    }//GEN-LAST:event_jTable1MouseClicked
     
    
     /**
